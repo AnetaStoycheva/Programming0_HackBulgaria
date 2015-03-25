@@ -1,15 +1,19 @@
 def str_reverse(string):
+
     new_string = ''
 
     for element in string:
         new_string = element + new_string
 
     return new_string
+
 # print(str_reverse("Python"))
 # print(str_reverse(""))
+# print(str_reverse('kapak'))
 
 
 def join(delimiter, a_list):
+
     new_list = ''
 
     for item in a_list:
@@ -21,26 +25,46 @@ def join(delimiter, a_list):
             new_list = new_list + str(item)
 
     return new_list
+
 # print(join("|", [1, 2, 3]))
 # print(join("2", ["Radoslav", "Yordanov", "Georgiev"]))
 # print(join("\n", ["line1", "line2"]))
 
 
 def take(n, items):
+
     result = []
 
-    for index in range(0, min(n, len(items))):
+    for index in range(0, min(n, len(items))):  # zavisi koe stane pyrvo
         result += [items[index]]
 
     return result
 
+# print(take(4, [1, 2, 3, 4, 5, 6, 7, 7]))
+# print(take(0, [1]))
+
+
+def tail(a_list):
+    return a_list[1:]
+
+
+def str_drop(n, string):
+
+    result = ""
+
+    for index in range(n, len(string)):
+        result += string[index]
+
+    return result
+
+# print(str_drop(1, "Annieeto"))
+# print(str_drop(-2, "bombi4ka"))  # rezultatyt e interesen (zaradi index -2)
+
 
 def startswith(search, string):
 
-    if search == string[0: len(search)]:
-        return True
-    else:
-        return False
+    return search == string[0: len(search)]
+
 # print(startswith("Py", "Python"))
 # print(startswith("py", "Python"))
 # print(startswith("baba", "asdbaba"))
@@ -52,27 +76,13 @@ def endswith(search, string):
     b = len(search)
     start = a - b
 
-    if string[start: ] == search:
-        return True
-    else:
-        return False
+    return string[start:] == search
+
 # print(endswith(".py", "hello.py"))
 # print(endswith("kapak", "babakapak"))
 # print(endswith(" ", "Python   "))
 # print(endswith("py", "python"))
-
-
-def tail(a_list):
-    return a_list[1:]
-
-
-def str_drop(n, string):
-    result = ''
-
-    for index in range(n, len(string)):
-        result += string[index]
-
-    return result
+# print(endswith("asdfgh", "asd"))
 
 
 def trim_left(string):
@@ -82,16 +92,25 @@ def trim_left(string):
 
     return string
 
-print(trim_left("     Rado  Rado"))
+# print(trim_left("     Rado  Rado"))
 
 
 def trim_right(string):
     return str_reverse(trim_left(str_reverse(string)))
 
+# print(len(trim_right("Rado Rado    ")))  # len za da sym sig, 4e nqma ' ' otzad
 
-def trim():
+
+def trim(string):
 
     result = trim_left(string)
-    result = trim_right(string)
+
+    result = trim_right(result)  # mnogo vajno -> da prilojim f-tq vyrhu ve4e otrqzaniq otlqvo str
 
     return result
+
+print((trim("   asda   ")))
+print(trim(" spacious    "))
+print(trim("no here but yes at end   "))
+print(len(trim("                      ")))
+print(trim("python"))
