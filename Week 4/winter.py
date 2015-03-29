@@ -12,6 +12,8 @@ def winter_is_coming(seasons):
 		else:
 			past_seasons += 1
 
+	# return past_seasons >= 5 --> tozi red pravi sledva6tite 4 izli6ni :D :D
+
 	if past_seasons < 5:
 		return False
 	else:

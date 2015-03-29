@@ -4,6 +4,6 @@ person["first_name"] = input('First name: ')
 person["second_name"] = input('Secon name: ')
 person["third_name"] = input('Third name: ')
 person["birth_year"] = int(input('When were you born, the year: ')) # za da mojem da vadim
-person["current_age"] = 2015 - person["birth_year"] # ne e to4no, ako RDto ne e minalo tazi godina! ima li import za tova?!
+person["current_age"] = 2015 - person["birth_year"] # ne e to4no, ako RDto ne e minalo tazi godina! moga da opredelq to4nata data
 
 print(person)
