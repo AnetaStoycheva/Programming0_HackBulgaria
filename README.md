@@ -1,3 +1,4 @@
 # Programming0_HackBulgaria
-Prorgamming0
+Programming0
+26.01.2015 - 15.04.2015
 https://github.com/HackBulgaria/Programming0-1
