@@ -28,7 +28,7 @@ def sands_of_time(n):
 
 sands_of_time(5)  # samo vikame f-qta, ne q printim, za6toto vry6ta None
 sands_of_time(7)
-sands_of_time(11)
+sands_of_time(1)
 
 # n = 5 ->
 # .*****.
